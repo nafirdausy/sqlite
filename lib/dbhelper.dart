@@ -23,9 +23,11 @@ class DbHelper {
   void _createDb(Database db, int version) async {
     await db.execute('''
       CREATE TABLE item (
-      id INTEGER PRIMARY KEY AUTOINCREMENT,
-      name TEXT,
-      price INTEGER
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT,
+        price INTEGER,
+        kode TEXT,
+        stock INTEGER
       )
     ''');
   }
